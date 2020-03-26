@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/store"
+        android:icon="@drawable/ic_local_grocery_store_black_35dp"
+        android:title="Store" />
+    <item
+        android:id="@+id/hospital"
+        android:icon="@drawable/ic_local_hospital_black_35dp"
+        android:title="Hospital" />
+    <item
+        android:id="@+id/leaderboard"
+        android:icon="@drawable/ic_card_giftcard_black_35dp"
+        android:title="Leaderboard" />
+    <item
+        android:id="@+id/donation"
+        android:icon="@drawable/ic_monetization_on_black_35dp"
+        android:title="Donation" />
+</menu>

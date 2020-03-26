@@ -52,7 +52,7 @@
             android:layout_width="0dp"
             android:layout_height="60dp"
             android:layout_weight="1"
-            android:src="@android:drawable/ic_menu_search"
+            android:src="@drawable/ic_search_black_35dp"
             android:id="@+id/search_button"/>
 
 
@@ -74,6 +74,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_nav"
+        app:itemIconTint="#000"
+        app:itemTextColor="#000"
+        android:background="#fff"
+        app:menu="@menu/bottomnav_menu"
         android:layout_alignParentBottom="true"/>
 
 
