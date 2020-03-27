@@ -38,7 +38,7 @@ public class MarketCardRVAdapter extends RecyclerView.Adapter<MarketCardRVAdapte
 
     @Override
     public int getItemCount() {
-        return 0;
+        return marketCardArrayList.size();
     }
 
     public class MCViewholder extends RecyclerView.ViewHolder {
