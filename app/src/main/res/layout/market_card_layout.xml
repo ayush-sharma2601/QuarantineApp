@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/market_card"
+        app:cardCornerRadius="100dp"
+        android:background="#000"
+        android:layout_margin="15dp"
+        android:elevation="8dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:id="@+id/market_card_image"
+            android:background="#fff"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#8BC34A"
+            android:padding="10dp"
+            android:weightSum="7">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/market_card_name"
+                android:text="Market_name"
+                android:layout_weight="5"
+                android:textSize="24sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/market_card_distance"
+                android:text="600m"
+                android:textColor="#fff"
+                android:textAlignment="center"
+                android:textSize="24dp"
+                android:layout_weight="2"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
