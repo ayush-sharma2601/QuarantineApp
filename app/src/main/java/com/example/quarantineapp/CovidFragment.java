@@ -67,10 +67,6 @@ public class CovidFragment extends Fragment {
             }
         });
 
-
-        CovidRvAdapter adapter=new CovidRvAdapter(covidModels,context);
-        recyclerView.setAdapter(adapter);
-
         return view;
     }
 
