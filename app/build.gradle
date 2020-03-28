@@ -3,6 +3,10 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
+    compileOptions {
+        targetCompatibility = "8"
+        sourceCompatibility = "8"
+    }
 
     defaultConfig {
         applicationId "com.example.quarantineapp"
@@ -38,4 +42,8 @@ dependencies {
     implementation "com.google.android.material:material:1.1.0"
     //design
     implementation 'com.google.android.material:material:1.1.0'
+    //api calling
+    implementation 'com.squareup.retrofit2:retrofit:2.8.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.8.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
 }

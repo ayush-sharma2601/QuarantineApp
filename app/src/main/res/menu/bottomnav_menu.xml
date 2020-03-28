@@ -9,9 +9,9 @@
         android:icon="@drawable/ic_local_hospital_black_35dp"
         android:title="Hospital" />
     <item
-        android:id="@+id/leaderboard"
+        android:id="@+id/covid19update"
         android:icon="@drawable/ic_card_giftcard_black_35dp"
-        android:title="Leaderboard" />
+        android:title="Covid 19 Updates" />
     <item
         android:id="@+id/donation"
         android:icon="@drawable/ic_monetization_on_black_35dp"
