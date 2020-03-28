@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         return true;
                     case R.id.donation:loadFragment(new DonationFragment());
                         return true;
-                    case R.id.leaderboard:loadFragment(new LeaderboardFragment());
+                    case R.id.leaderboard:loadFragment(new CovidFragment());
                         return true;
                 }
                 return false;
