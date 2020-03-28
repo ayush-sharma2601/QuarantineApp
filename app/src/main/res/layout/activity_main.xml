@@ -12,12 +12,15 @@
         android:id="@+id/toolbar"
         android:orientation="horizontal"
         android:padding="10dp">
+
         <ImageView
-            android:layout_width="30dp"
+            android:id="@+id/menu_button"
+            android:layout_width="wrap_content"
             android:layout_height="30dp"
-            android:background="@android:drawable/btn_default"
+            android:tint="#000"
+            android:backgroundTint="#000"
             android:layout_alignParentStart="true"
-            android:id="@+id/menu_button"/>
+            android:background="@drawable/ic_menu_black_24dp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,21 +40,26 @@
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
         android:weightSum="5"
         android:layout_below="@id/toolbar"
-        android:orientation="horizontal"
         android:id="@+id/search_bar">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:background="#0ff"
+            android:background="#347837"
+            android:text="Markets"
+            android:textSize="20sp"
+            android:textColor="#fff"
+            android:gravity="center"
             android:id="@+id/store_button"
             android:layout_weight="2"/>
         <ImageView
-            android:layout_width="0dp"
+            android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
+            android:padding="15dp"
             android:src="@drawable/ic_search_black_35dp"
             android:id="@+id/search_button"/>
 
@@ -60,7 +68,11 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/item_button"
-            android:background="#0ff"
+            android:text="Items"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:background="#347837"
             android:layout_weight="2"/>
     </LinearLayout>
     <FrameLayout
@@ -68,7 +80,6 @@
         android:layout_height="match_parent"
         android:layout_below="@id/search_bar"
         android:layout_above="@id/bottom_nav"
-        android:padding="10dp"
         android:id="@+id/frame_layout"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"

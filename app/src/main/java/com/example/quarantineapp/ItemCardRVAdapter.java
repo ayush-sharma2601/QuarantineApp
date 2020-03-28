@@ -46,6 +46,9 @@ public class ItemCardRVAdapter extends RecyclerView.Adapter<ItemCardRVAdapter.IC
         ImageView itemImage,itemIsAvail;
         public ICViewHolder(@NonNull View itemView) {
             super(itemView);
+            itemName = itemView.findViewById(R.id.item_card_name);
+            itemIsAvail = itemView.findViewById(R.id.item_card_availability_image);
+            itemImage = itemView.findViewById(R.id.item_card_image);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

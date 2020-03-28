@@ -43,9 +43,10 @@ public class MarketCardRVAdapter extends RecyclerView.Adapter<MarketCardRVAdapte
 
     public class MCViewholder extends RecyclerView.ViewHolder {
          TextView marketName,marketDistance;
-         ImageView marketImage;
         public MCViewholder(@NonNull View itemView) {
             super(itemView);
+            marketName= itemView.findViewById(R.id.market_card_name);
+            marketDistance = itemView.findViewById(R.id.market_card_distance);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -57,7 +58,6 @@ public class MarketCardRVAdapter extends RecyclerView.Adapter<MarketCardRVAdapte
         public void populate(market_card market_card) {
             marketName.setText(market_card.getMarketName());
             marketDistance.setText(market_card.getMarketDistance());
-            marketImage.setImageResource(market_card.getImageID());
         }
     }
 }
