@@ -16,6 +16,10 @@
         android:icon="@drawable/ic_person_add_black_24dp"
         android:onClick="HospLogin"/>
     <item
+        android:title="Logout"
+        android:id="@+id/drawer_logout"
+        android:onClick="Logout"/>
+    <item
         android:title="About Us"
         android:id="@+id/drawer_aboutus" />
 

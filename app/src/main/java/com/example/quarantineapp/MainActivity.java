@@ -18,12 +18,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     FrameLayout frameLayout;
     TextView itemButton, storeButton,heading;
     ImageView searchBtn,menuBtn;
     DrawerLayout drawerLayout;
+    FirebaseAuth firebaseAuth;
     BottomNavigationView bottomNavigationView;
 
     @Override
@@ -120,9 +122,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ShopLogin(MenuItem item) {
-        Intent goShop = new Intent(MainActivity.this,Login)
+        Intent goShop = new Intent(MainActivity.this,Login.class);
+        goShop.putExtra("key","market");
+        startActivity(goShop);
     }
 
     public void HospLogin(MenuItem item) {
+        Intent goShop = new Intent(MainActivity.this,Login.class);
+        goShop.putExtra("key","hospital");
+        startActivity(goShop);
+    }
+
+    public void Logout(MenuItem item) {
+        firebaseAuth.getInstance().signOut();
     }
 }
