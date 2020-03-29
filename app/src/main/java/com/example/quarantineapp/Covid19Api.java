@@ -11,6 +11,6 @@ public interface Covid19Api {
             "Content-type:application/json; charset=UTF-8"
     })
 
-    @GET("/live/country/india/status/confirmed/date/2020-03-28T13:13:30Z")
+    @GET("/live/country/india/status/confirmed/date/2020-03-28T19:13:30Z")
     Call<List<Covid19ApiModel>> getdata();
 }

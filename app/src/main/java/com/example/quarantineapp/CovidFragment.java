@@ -66,6 +66,7 @@ public class CovidFragment extends Fragment {
                 Toast.makeText(getContext(),t.getMessage(),Toast.LENGTH_LONG).show();
             }
         });
+        covidModels=new ArrayList<>();
 
         return view;
     }
