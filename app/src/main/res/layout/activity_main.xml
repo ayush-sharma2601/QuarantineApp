@@ -54,7 +54,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
-            android:background="#347837"
+            android:background="#FF8BC34A"
             android:text="Markets"
             android:layout_toLeftOf="@id/search_button"
             android:textSize="20sp"
@@ -90,7 +90,7 @@
 android:layout_toRightOf="@id/search_button"
             android:textSize="20sp"
             android:gravity="center"
-            android:background="#347837"
+            android:background="#FF8BC34A"
             android:layout_weight="2"/>
     </RelativeLayout>
     <FrameLayout
@@ -103,7 +103,7 @@ android:layout_toRightOf="@id/search_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/bottom_nav"
-        app:itemIconTint="#000"
+        app:itemIconTint="#BED905"
         app:itemTextColor="#000"
         android:background="#fff"
         app:menu="@menu/bottomnav_menu"
