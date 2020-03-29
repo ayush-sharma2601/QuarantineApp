@@ -8,11 +8,13 @@
     <item
         android:title="Shop Login"
         android:id="@+id/drawer_shop"
-        android:icon="@drawable/ic_person_add_black_24dp"/>
+        android:icon="@drawable/ic_person_add_black_24dp"
+        android:onClick="ShopLogin"/>
     <item
         android:title="Hospital Login"
         android:id="@+id/drawer_hospital"
-        android:icon="@drawable/ic_person_add_black_24dp"/>
+        android:icon="@drawable/ic_person_add_black_24dp"
+        android:onClick="HospLogin"/>
     <item
         android:title="About Us"
         android:id="@+id/drawer_aboutus" />
