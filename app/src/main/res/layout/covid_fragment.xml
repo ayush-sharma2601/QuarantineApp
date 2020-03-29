@@ -9,17 +9,18 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30dp"
         android:gravity="center"
-        android:id="@+id/covidcounter"
-        android:text="Covid -19 Live Counter"
-        />
+        android:layout_marginTop="5dp"
+        android:text="INDIA"
+        android:textSize="24sp"
+        android:id="@+id/name"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/covid_recyclerview"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/covidcounter"
+        android:layout_below="@id/name"
+        android:layout_marginTop="10dp"
         />
 
 </RelativeLayout>

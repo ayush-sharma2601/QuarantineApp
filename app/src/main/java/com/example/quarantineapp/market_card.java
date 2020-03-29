@@ -4,11 +4,21 @@ public class market_card {
     private int imageID;
     private String marketName;
     private String marketDistance;
+    private int backColor;
 
-    public market_card(int imageID, String marketName, String marketDistance) {
+    public market_card(int imageID, String marketName, String marketDistance,int backColor) {
         this.imageID = imageID;
         this.marketName = marketName;
         this.marketDistance = marketDistance;
+        this.backColor = backColor;
+    }
+
+    public int getBackColor() {
+        return backColor;
+    }
+
+    public void setBackColor(int backColor) {
+        this.backColor = backColor;
     }
 
     public int getImageID() {

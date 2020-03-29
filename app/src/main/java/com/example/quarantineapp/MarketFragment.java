@@ -1,5 +1,6 @@
 package com.example.quarantineapp;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -30,7 +31,7 @@ public class MarketFragment extends Fragment {
         int[] marketImages ={R.drawable.scene,R.drawable.scene};
         for (int i=0;i<2;i++)
         {
-            marketCardArrayList.add(new market_card(marketImages[i],marketName[i],marketDistance[i]));
+            marketCardArrayList.add(new market_card(R.drawable.scene,marketName[i],marketDistance[i], 0xFF8BC34A));
         }
         marketRV.setLayoutManager(new LinearLayoutManager(getContext()));
         MarketCardRVAdapter adapter = new MarketCardRVAdapter(marketCardArrayList,getContext(),getActivity());

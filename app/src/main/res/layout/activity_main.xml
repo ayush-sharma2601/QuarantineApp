@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer">
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -38,18 +43,20 @@
             android:background="@mipmap/ic_launcher"/>
         
     </RelativeLayout>
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
         android:weightSum="5"
+        android:background="#347837"
         android:layout_below="@id/toolbar"
         android:id="@+id/search_bar">
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:background="#347837"
             android:text="Markets"
+            android:layout_toLeftOf="@id/search_button"
             android:textSize="20sp"
             android:textColor="#fff"
             android:gravity="center"
@@ -59,6 +66,8 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_weight="1"
+            android:background="#fff"
+            android:layout_centerHorizontal="true"
             android:padding="15dp"
             android:src="@drawable/ic_search_black_35dp"
             android:id="@+id/search_button"/>
@@ -73,16 +82,17 @@
             -->
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="match_parent"
             android:id="@+id/item_button"
             android:text="Items"
             android:textColor="#fff"
+android:layout_toRightOf="@id/search_button"
             android:textSize="20sp"
             android:gravity="center"
             android:background="#347837"
             android:layout_weight="2"/>
-    </LinearLayout>
+    </RelativeLayout>
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -98,6 +108,16 @@
         android:background="#fff"
         app:menu="@menu/bottomnav_menu"
         android:layout_alignParentBottom="true"/>
-
-
 </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/main_nav"
+        app:menu="@menu/side_drawer_menu"
+        app:headerLayout="@layout/drawer_header_layout"
+        android:layout_gravity="start"/>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

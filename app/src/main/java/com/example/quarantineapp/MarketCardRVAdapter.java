@@ -2,10 +2,12 @@ package com.example.quarantineapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -43,10 +45,14 @@ public class MarketCardRVAdapter extends RecyclerView.Adapter<MarketCardRVAdapte
 
     public class MCViewholder extends RecyclerView.ViewHolder {
          TextView marketName,marketDistance;
+         ImageView image;
+         RelativeLayout cardBack;
         public MCViewholder(@NonNull View itemView) {
             super(itemView);
             marketName= itemView.findViewById(R.id.market_card_name);
             marketDistance = itemView.findViewById(R.id.market_card_distance);
+            image = itemView.findViewById(R.id.card_image);
+            cardBack = itemView.findViewById(R.id.card_background);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -58,6 +64,8 @@ public class MarketCardRVAdapter extends RecyclerView.Adapter<MarketCardRVAdapte
         public void populate(market_card market_card) {
             marketName.setText(market_card.getMarketName());
             marketDistance.setText(market_card.getMarketDistance());
+            image.setImageResource(market_card.getImageID());
+            cardBack.setBackgroundColor(market_card.getBackColor());
         }
     }
 }

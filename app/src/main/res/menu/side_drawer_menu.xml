@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Home"
+        android:id="@+id/drawer_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:onClick="DrawerClose"/>
+    <item
+        android:title="Shop Login"
+        android:id="@+id/drawer_shop"
+        android:icon="@drawable/ic_person_add_black_24dp"/>
+    <item
+        android:title="Hospital Login"
+        android:id="@+id/drawer_hospital"
+        android:icon="@drawable/ic_person_add_black_24dp"/>
+    <item
+        android:title="About Us"
+        android:id="@+id/drawer_aboutus" />
+
+</menu>
