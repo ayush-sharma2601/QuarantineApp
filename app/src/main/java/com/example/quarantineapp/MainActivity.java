@@ -71,8 +71,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         itemButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
+
 
     public void DrawerClose(MenuItem item) {
         drawerLayout.closeDrawer(Gravity.LEFT);

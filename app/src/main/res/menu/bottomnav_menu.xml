@@ -2,19 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/store"
-        android:icon="@drawable/store_nav_icon"
-        android:title="Store" />
+        android:icon="@mipmap/store_nav_icon"
+        android:title="Store"
+         />
     <item
         android:id="@+id/hospital"
-        android:icon="@drawable/hosp_nav_icon"
-        android:title="Hospital" />
+        android:icon="@mipmap/hosp_nav_icon"
+        android:title="Hospital"
+         />
     <item
         android:id="@+id/covid19update"
-        android:icon="@drawable/covid_nav_icon"
-        android:title="Covid 19 Updates" />
+        android:icon="@mipmap/covid_nav_icon"
+        android:title="Covid 19"
+         />
     <item
         android:id="@+id/donation"
-        android:icon="@drawable/donate_nav_icon"
-        android:title="Donation" />
+        android:icon="@mipmap/donate_nav_icon"
+        android:title="Donation"
+         />
 
 </menu>
