@@ -15,15 +15,19 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     FrameLayout frameLayout;
     TextView itemButton, storeButton,heading;
     ImageView searchBtn,menuBtn;
     DrawerLayout drawerLayout;
+    RelativeLayout searchBar;
+    FirebaseAuth firebaseAuth;
     BottomNavigationView bottomNavigationView;
 
     @Override
@@ -40,21 +44,25 @@ public class MainActivity extends AppCompatActivity {
                 {
                     case R.id.store:{
                         loadFragment(new MarketFragment());
+                        searchBar.setVisibility(View.VISIBLE);
                         heading.setText("Store");
                     }
                         return true;
                     case R.id.hospital:{
                         loadFragment(new HospitalFragment());
+                        searchBar.setVisibility(View.GONE);
                         heading.setText("Hospital");
                     }
                         return true;
                     case R.id.donation:{
                         loadFragment(new DonationFragment());
+                        searchBar.setVisibility(View.GONE);
                         heading.setText("Donate");
                     }
                         return true;
                     case R.id.covid19update: {
                         loadFragment(new CovidFragment());
+                        searchBar.setVisibility(View.GONE);
                         heading.setText("Covid-19 Live");
                     }
                         return true;
@@ -101,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
         storeButton=findViewById(R.id.store_button);
         bottomNavigationView=findViewById(R.id.bottom_nav);
         searchBtn = findViewById(R.id.search_button);
+        searchBar = findViewById(R.id.search_bar);
         drawerLayout = findViewById(R.id.drawer);
         menuBtn = findViewById(R.id.menu_button);
         heading = findViewById(R.id.Home);
@@ -121,8 +130,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void ShopLogin(MenuItem item) {
         Intent goShop = new Intent(MainActivity.this,Login.class);
+        goShop.putExtra("key","market");
+        startActivity(goShop);
     }
 
     public void HospLogin(MenuItem item) {
+        Intent goShop = new Intent(MainActivity.this,Login.class);
+        goShop.putExtra("key","hospital");
+        startActivity(goShop);
+    }
+
+    public void Logout(MenuItem item) {
+        firebaseAuth.getInstance().signOut();
     }
 }
