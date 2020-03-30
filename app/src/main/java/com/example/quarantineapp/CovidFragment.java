@@ -15,8 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -56,10 +55,12 @@ public class CovidFragment extends Fragment {
                 for (Covid19ApiModel covid19ApiModel:covid19ApiModels)
                 {
                     covidModels.add(new CovidModel(covid19ApiModel.getCountry(),covid19ApiModel.getProvince(),covid19ApiModel.getLat(),covid19ApiModel.getLon(),covid19ApiModel.getDate(),covid19ApiModel.getCases(),covid19ApiModel.getStatus()));
-                    CovidRvAdapter adapter=new CovidRvAdapter(covidModels,context);
-                    recyclerView.setAdapter(adapter);
+
 
                 }
+                Collections.reverse(covidModels);
+                CovidRvAdapter adapter=new CovidRvAdapter(covidModels,context);
+                recyclerView.setAdapter(adapter);
 
             }
 

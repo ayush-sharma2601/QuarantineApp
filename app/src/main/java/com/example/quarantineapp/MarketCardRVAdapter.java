@@ -2,6 +2,7 @@ package com.example.quarantineapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -56,7 +57,11 @@ public class MarketCardRVAdapter extends RecyclerView.Adapter<MarketCardRVAdapte
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(context,"pressed",Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(context,"pressed",Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(context,Market_Activity.class);
+                    intent.putExtra("name",marketName.getText().toString());
+                    intent.putExtra("phone","9999999999");
+                    context.startActivity(intent);
                 }
             });
         }
