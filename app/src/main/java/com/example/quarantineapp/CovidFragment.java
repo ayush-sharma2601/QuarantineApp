@@ -56,14 +56,19 @@ public class CovidFragment extends Fragment {
                 {
                     covidModels.add(new CovidModel(covid19ApiModel.getCountry(),covid19ApiModel.getProvince(),covid19ApiModel.getLat(),covid19ApiModel.getLon(),covid19ApiModel.getDate(),covid19ApiModel.getCases(),covid19ApiModel.getStatus()));
 
-
                 }
+
                 Collections.reverse(covidModels);
-                CovidRvAdapter adapter=new CovidRvAdapter(covidModels,context);
+                ArrayList<CovidModel> cmodel=new ArrayList<>();
+                for(int i=0;i<=9;i++)
+                {
+                    cmodel.add(covidModels.get(i));
+                }
+
+                CovidRvAdapter adapter=new CovidRvAdapter(cmodel,context);
                 recyclerView.setAdapter(adapter);
 
             }
-
             @Override
             public void onFailure(Call<List<Covid19ApiModel>> call, Throwable t) {
                 Toast.makeText(getContext(),t.getMessage(),Toast.LENGTH_LONG).show();
