@@ -59,9 +59,9 @@ public class Signup extends AppCompatActivity {
                         userReference.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).child("address").setValue(idMH);
                         Toast.makeText(Signup.this, "User created", Toast.LENGTH_SHORT).show();
                         //bhai yahan par intent wali line likh dena
-//                        Intent goLogin = new Intent(Signup.this,Login.class);
-//                        startActivity(goLogin);
-//                        finish();
+                        Intent goLogin = new Intent(Signup.this,Login.class);
+                        startActivity(goLogin);
+                        finish();
                     }
                 })
                         .addOnFailureListener(new OnFailureListener() {

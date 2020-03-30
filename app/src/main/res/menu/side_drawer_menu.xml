@@ -8,7 +8,7 @@
     <item
         android:title="Shop Login"
         android:id="@+id/drawer_shop"
-        android:icon="@drawable/ic_person_add_black_24dp"
+        android:icon="@drawable/ic_person_black_24dp"
         android:onClick="ShopLogin"/>
     <item
         android:title="Hospital Login"
@@ -17,6 +17,7 @@
         android:onClick="HospLogin"/>
     <item
         android:title="Logout"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
         android:id="@+id/drawer_logout"
         android:onClick="Logout"/>
     <item

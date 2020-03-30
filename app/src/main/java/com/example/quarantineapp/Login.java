@@ -23,6 +23,7 @@ public class Login extends AppCompatActivity {
     TextView signin;
     ProgressBar progressBar;
     FirebaseAuth fAuth;
+    MainActivity mainActivity;
 //    String[] Register={"User","Shop Owner","Hospital"};
 
     @Override
@@ -30,6 +31,7 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         attachID();
+        String id = getIntent().getStringExtra("key");
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -44,6 +46,9 @@ public class Login extends AppCompatActivity {
                     public void onSuccess(AuthResult authResult) {
                         Toast.makeText(Login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                         //bhai yahan Intent wali line daal dena
+                        mainActivity.loadFragment(new ShopFragment());
+                        Intent intent =new Intent(Login.this,MainActivity.class);
+                        intent.putExtra("moh",id);
                         finish();
                     }
                 })

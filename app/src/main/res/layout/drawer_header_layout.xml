@@ -5,13 +5,13 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     android:gravity="center"
-    android:background="#4CAF50">
+    android:background="#00C853">
     <ImageView
         android:layout_marginTop="10dp"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:tint="#fff"
-        android:src="@drawable/ic_card_giftcard_black_35dp"
+        android:src="@mipmap/store_nav_icon"
         android:id="@+id/drawer_app_icon"/>
     <TextView
         android:layout_width="wrap_content"
