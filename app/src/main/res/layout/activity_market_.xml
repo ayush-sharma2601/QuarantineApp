@@ -28,7 +28,6 @@
         android:gravity="center"
         android:layout_margin="20dp"
         android:layout_alignParentEnd="true"
-        android:layout_toRightOf="@id/tv_name_of_market"
         android:orientation="vertical"
         android:id="@+id/crowded">
     <ImageView

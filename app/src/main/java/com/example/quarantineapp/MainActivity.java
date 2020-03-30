@@ -17,9 +17,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
     FrameLayout frameLayout;
@@ -27,24 +32,37 @@ public class MainActivity extends AppCompatActivity {
     ImageView searchBtn,menuBtn;
     DrawerLayout drawerLayout;
     RelativeLayout searchBar;
-    FirebaseAuth firebaseAuth;
+    FirebaseAuth fAuth;
+    DatabaseReference userReference;
     BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        loadFragment(new MarketFragment());
         attachID();
-
+        if (fAuth.getCurrentUser() != null){
+            loadFragment(new ShopFragment());
+            searchBar.setVisibility(View.GONE);
+            drawerLayout.closeDrawer(Gravity.LEFT);
+        }
+        else{
+            loadFragment(new MarketFragment());
+            drawerLayout.closeDrawer(Gravity.LEFT);
+        }
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch(item.getItemId())
                 {
                     case R.id.store:{
-                        loadFragment(new MarketFragment());
-                        searchBar.setVisibility(View.VISIBLE);
+                        if (fAuth.getCurrentUser() != null){
+                            loadFragment(new ShopFragment());
+                        }
+                        else{
+                            loadFragment(new MarketFragment());
+                            searchBar.setVisibility(View.VISIBLE);
+                        }
                         heading.setText("Store");
                     }
                         return true;
@@ -111,6 +129,8 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.drawer);
         menuBtn = findViewById(R.id.menu_button);
         heading = findViewById(R.id.Home);
+        fAuth=FirebaseAuth.getInstance();
+        userReference= FirebaseDatabase.getInstance().getReference().child("users");
     }
 
 
@@ -140,6 +160,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Logout(MenuItem item) {
-        firebaseAuth.getInstance().signOut();
+        fAuth.getInstance().signOut();
+        Toast.makeText(MainActivity.this,"Logout Successful",Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(MainActivity.this,MainActivity.class);
+        startActivity(intent);
     }
 }
