@@ -25,7 +25,7 @@ public class ItemFragment extends Fragment {
         view = inflater.inflate(R.layout.item_fragment,container,false);
         itemRV = view.findViewById(R.id.itemRV);
         String[] itemName={"Bread","Milk","Biscuit","Atta","chawal"};
-        int[] itemImage = {R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground,R.drawable.ic_launcher_foreground};
+        int[] itemImage = {R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher,R.mipmap.ic_launcher};
         int[] itemAvail = {R.drawable.ic_close_black_24dp,R.drawable.ic_check_black_24dp,R.drawable.ic_close_black_24dp,R.drawable.ic_check_black_24dp,R.drawable.ic_close_black_24dp};
         for (int i=0;i<5;i++)
         {
