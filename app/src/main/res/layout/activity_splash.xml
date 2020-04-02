@@ -8,11 +8,11 @@
     android:gravity="center"
     tools:context=".Splash">
 
-    <TextView
+    <ImageView
         android:layout_width="140dp"
         android:layout_height="140dp"
         android:layout_margin="30dp"
-        android:background="@mipmap/ic_nav_store"
+        android:id="@+id/splashiv"
         />
     <TextView
         android:layout_width="wrap_content"

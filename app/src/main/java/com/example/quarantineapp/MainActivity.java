@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
