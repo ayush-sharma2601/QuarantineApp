@@ -10,6 +10,6 @@ package com.example.quarantineapp;
 public interface Covid19Api {
 
 
-    @GET("/live/country/india/status/confirmed/date/2020-03-30T00:00:00Z")
+    @GET("/live/country/india/status/confirmed/date/2020-04-09T00:00:00Z")
     Call<List<Covid19ApiModel>> getdata();
 }
