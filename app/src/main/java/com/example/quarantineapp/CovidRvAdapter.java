@@ -39,7 +39,7 @@ public class CovidRvAdapter extends RecyclerView.Adapter<CovidRvAdapter.CovidVH>
 
     class CovidVH extends RecyclerView.ViewHolder
     {
-        TextView status,country,cases,date,latitude,longitude,time;
+        TextView status,country,cases,date,latitude,longitude,time,deaths,active,recovered;
 
         public CovidVH(@NonNull View itemView) {
             super(itemView);
@@ -50,6 +50,10 @@ public class CovidRvAdapter extends RecyclerView.Adapter<CovidRvAdapter.CovidVH>
 //            latitude=itemView.findViewById(R.id.covid_rv_latitude);
 //            longitude=itemView.findViewById(R.id.covid_rv_longitude);
             cases=itemView.findViewById(R.id.covid_rv_cases);
+            deaths=itemView.findViewById(R.id.covid_rv_deaths);
+            active=itemView.findViewById(R.id.covid_rv_active);
+            recovered=itemView.findViewById(R.id.covid_rv_recovered);
+
 
         }
 
@@ -63,10 +67,13 @@ public class CovidRvAdapter extends RecyclerView.Adapter<CovidRvAdapter.CovidVH>
             status.setText(covidModel.getStatus());
             date.setText(date1);
             time.setText(time1);
-//            country.setText(covidModel.getCountry());
-//            latitude.setText(""+covidModel.getLatitude());
-//            longitude.setText(""+covidModel.getLongitude());
-            cases.setText(""+covidModel.getCases());
+            country.setText(covidModel.getCountry());
+            latitude.setText(""+covidModel.getLatitude());
+           longitude.setText(""+covidModel.getLongitude());
+            cases.setText(""+covidModel.getConfirmed());
+            deaths.setText(""+covidModel.getDeaths());
+            active.setText(""+covidModel.getActive());
+            recovered.setText(""+covidModel.getRecovered());
 
         }
     }

@@ -3,44 +3,51 @@ package com.example.quarantineapp;
 public class CovidModel {
 
     private String country;
-    private String province;
-    private double latitude;
-    private double longitude;
+    private String countryid;
+    private String latitude;
+    private String longitude;
     private String date;
-    private int cases;
+    private int confirmed;
     private String status;
+    private int recovered;
+    private int deaths;
+    private int active;
 
-    public CovidModel(String country,String province,double latitude, double longitude, String date, int cases, String status) {
+
+    public CovidModel(String country, String countryid, String latitude, String longitude, String date, int confirmed, String status, int recovered, int deaths, int active) {
         this.country = country;
-        this.province=province;
+        this.countryid =countryid;
         this.latitude = latitude;
         this.longitude = longitude;
         this.date = date;
-        this.cases = cases;
+        this.confirmed = confirmed;
         this.status = status;
+        this.recovered = recovered;
+        this.deaths = deaths;
+        this.active = active;
     }
 
-    public String getProvince() {
-        return province;
+    public String getCountryid() {
+        return countryid;
     }
 
-    public void setProvince(String province) {
-        this.province = province;
+    public void setCountryid(String countryid) {
+        this.countryid = countryid;
     }
 
-    public double getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(double latitude) {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
-    public double getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(double longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 
@@ -60,12 +67,36 @@ public class CovidModel {
         this.country = country;
     }
 
-    public int getCases() {
-        return cases;
+    public int getConfirmed() {
+        return confirmed;
     }
 
-    public void setCases(int cases) {
-        this.cases = cases;
+    public int getRecovered() {
+        return recovered;
+    }
+
+    public void setRecovered(int recovered) {
+        this.recovered = recovered;
+    }
+
+    public int getDeaths() {
+        return deaths;
+    }
+
+    public void setDeaths(int deaths) {
+        this.deaths = deaths;
+    }
+
+    public int getActive() {
+        return active;
+    }
+
+    public void setActive(int active) {
+        this.active = active;
+    }
+
+    public void setConfirmed(int confirmed) {
+        this.confirmed = confirmed;
     }
 
     public String getStatus() {

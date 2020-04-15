@@ -1,6 +1,5 @@
 package com.example.quarantineapp;
 
-import android.app.DownloadManager;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -21,7 +20,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class CovidFragment extends Fragment {
     public CovidFragment() {
@@ -54,7 +52,7 @@ public class CovidFragment extends Fragment {
                 List<Covid19ApiModel> covid19ApiModels=response.body();
                 for (Covid19ApiModel covid19ApiModel:covid19ApiModels)
                 {
-                    covidModels.add(new CovidModel(covid19ApiModel.getCountry(),covid19ApiModel.getProvince(),covid19ApiModel.getLat(),covid19ApiModel.getLon(),covid19ApiModel.getDate(),covid19ApiModel.getCases(),covid19ApiModel.getStatus()));
+                    covidModels.add(new CovidModel(covid19ApiModel.getCountry(),covid19ApiModel.getCountryCode(),covid19ApiModel.getLat(),covid19ApiModel.getLon(),covid19ApiModel.getDate(),covid19ApiModel.getConfirmed(),covid19ApiModel.getStatus(),covid19ApiModel.getRecovered(),covid19ApiModel.getDeaths(),covid19ApiModel.getActive()));
 
                 }
 
