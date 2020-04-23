@@ -8,12 +8,12 @@
     android:gravity="center"
     tools:context=".Splash">
 
-    <ImageView
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_margin="30dp"
-        android:id="@+id/splashiv"
-        />
+<!--    <ImageView-->
+<!--        android:layout_width="140dp"-->
+<!--        android:layout_height="140dp"-->
+<!--        android:layout_margin="30dp"-->
+<!--        android:id="@+id/splashiv"-->
+<!--        />-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

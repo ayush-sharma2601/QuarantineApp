@@ -14,12 +14,22 @@
         android:text="INDIA"
         android:textSize="24sp"
         android:id="@+id/name"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Last Five Days"
+        android:id="@+id/lfd"
+        android:layout_below="@id/name"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="#0f5e4d"
+        android:layout_margin="10dp"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/covid_recyclerview"
-        android:layout_below="@id/name"
+        android:layout_below="@id/lfd"
         android:layout_marginTop="10dp"
         />
 

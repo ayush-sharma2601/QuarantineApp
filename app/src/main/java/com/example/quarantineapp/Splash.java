@@ -15,8 +15,8 @@ public class Splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        splashTv=findViewById(R.id.splashiv);
-        splashTv.setImageResource(R.mipmap.qqqa);
+//        splashTv=findViewById(R.id.splashiv);
+//        splashTv.setImageResource(R.mipmap.qqqa);
 
         new Handler().postDelayed(new Runnable() {
             @Override
